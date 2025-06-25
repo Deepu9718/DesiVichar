@@ -1,19 +1,23 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Home from './pages/Home';
-import Register from './pages/Register';
-import Login from './pages/Login';
-import Feed from './pages/Feed';
+// src/App.js
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Feed from "./pages/Feed";
 
-const isLoggedIn = false; // replace with real auth logic
+function App() {
+  const isLoggedIn = false; // temporary hardcoded for now
 
-export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/feed" element={isLoggedIn ? <Feed /> : <Navigate to="/login" />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={isLoggedIn ? <Navigate to="/feed" /> : <Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/feed" element={<Feed />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
