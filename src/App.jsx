@@ -29,7 +29,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import DMCA from "./pages/DMCA";
 import Roadmap from "./pages/Roadmap";
-import LuckySpin from "./pages/LuckySpin";
 import { checkAndUpdateBadges } from "./utils/badgeLogic";
 import { initializeUserFieldsIfMissing } from "./utils/initUserFields";
 import SocialIcons from "./components/SocialIcons";
@@ -82,7 +81,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/dmca" element={<DMCA />} />
         <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/lucky-spin" element={<LuckySpin />} />
+      
 
         </Routes>
   

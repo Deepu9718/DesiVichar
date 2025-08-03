@@ -32,9 +32,7 @@ function Navbar() {
               <Link to="/vicharbattle" className="hover:text-red-600 hover:underline">🆚 Vichar Battle</Link>
               <Link to={`/profile/${user.uid}`} className="hover:text-red-600">Profile</Link>
               <li>
-              <Link to="/invitepage" className="hover:text-red-600 hover:underline">Invite & Earn</Link>
-              <Link to="/lucky-spin" className="text-sm hover:text-yellow-600">🎡 Lucky Spin</Link>
-              </li>
+              <Link to="/invitepage" className="hover:text-red-600 hover:underline">Invite & Earn</Link>              </li>
               {user && (
               <Link to="/wallet" className="text-yellow-600 font-semibold hover:underline">
               💰 Wallet
