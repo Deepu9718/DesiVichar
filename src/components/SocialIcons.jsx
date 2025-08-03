@@ -8,24 +8,22 @@ import {
   FaInstagram,
   FaDiscord,
   FaWhatsapp,
-  FaLinkedinIn,
   FaTelegramPlane,
   FaSnapchatGhost,
   } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <FaFacebookF />, url: "https://facebook.com", label: "Facebook" },
-  { icon: <FaTwitter />, url: "https://twitter.com", label: "Twitter" },
-  { icon: <FaYoutube />, url: "https://youtube.com", label: "YouTube" },
-  { icon: <FaPinterestP />, url: "https://pinterest.com", label: "Pinterest" },
-  { icon: <FaRedditAlien />, url: "https://reddit.com", label: "Reddit" },
-  { icon: <FaInstagram />, url: "https://instagram.com", label: "Instagram" },
-  { icon: <FaDiscord />, url: "https://discord.com", label: "Discord" },
-  { icon: <FaWhatsapp />, url: "https://wa.me", label: "WhatsApp" },
-  { icon: <FaLinkedinIn />, url: "https://linkedin.com", label: "LinkedIn" },
-  { icon: <FaTelegramPlane />, url: "https://t.me/yourgroup", label: "Telegram Group" },
-  { icon: <FaTelegramPlane />, url: "https://t.me/yourchannel", label: "Telegram Channel" },
-  { icon: <FaSnapchatGhost />, url: "https://snapchat.com", label: "Snapchat" },
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/cnncreations", label: "Facebook" },
+  { icon: <FaTwitter />, url: "https://twitter.com/cnncreations", label: "Twitter" },
+  { icon: <FaYoutube />, url: "https://youtube.com/@cnncreations", label: "YouTube" },
+  { icon: <FaPinterestP />, url: "https://pinterest.com/cnncreations", label: "Pinterest" },
+  { icon: <FaRedditAlien />, url: "https://reddit.comuser/ShortImagination9212", label: "Reddit" },
+  { icon: <FaInstagram />, url: "https://instagram.com/cnncreations", label: "Instagram" },
+  { icon: <FaDiscord />, url: "https://discord.gg/xc985xTd", label: "Discord" },
+  { icon: <FaWhatsapp />, url: "https://chat.whatsapp.com/DJbW2994MtP0I5BwUst6pj?mode=ac_t", label: "WhatsApp" },
+  { icon: <FaTelegramPlane />, url: "https://t.me/+z-JcfL1zDdVhNmFl", label: "Telegram Group" },
+  { icon: <FaTelegramPlane />, url: "https://t.me/cnncreations", label: "Telegram Channel" },
+  { icon: <FaSnapchatGhost />, url: "https://snapchat.com/add/cnncreations", label: "Snapchat" },
   ];
 
 const SocialIcons = () => {
