@@ -25,17 +25,17 @@ function Profile() {
     });
   };
 
-  const getBadgeSymbol = (badges) => {
-    switch (badges) {
-      case "Badge 1": return "👋 Welcome";
-      case "Badge 2": return "📅 Regular";
-      case "Badge 3": return "🌟 Dream";
-      case "Badge 4": return "💎 Valuable";
-      case "Badge 5": return "🎖️ Digital";
-      case "Badge 6": return "🎭 Desi Kalakaar";
-      case "Influencer": return "🚀 Influencer";
-      default: return "🥉 No Badge";
-    }
+  const getBadgeSymbols = (unlockedBadges = []) => {
+    const badgeMap = {
+      "Badge 1": "👋 Welcome",
+      "Badge 2": "📅 Regular",
+      "Badge 3": "🌟 Dream",
+      "Badge 4": "💎 Valuable",
+      "Badge 5": "🎖️ Digital",
+      "Badge 6": "🎭 Desi Kalakaar",
+      "Influencer": "🚀 Influencer",
+    }  
+    return unlockedBadges.map(badge => badgeMap[badge] || "🥉 Unknown");
   };
 
   const fetchUserAndPosts = async () => {
@@ -118,7 +118,13 @@ function Profile() {
           <p className="text-sm text-gray-500">{userData.email}</p>
           {userData.gender && <p className="text-sm text-gray-500 capitalize">Gender: {userData.gender}</p>}
           {userData.dob && <p className="text-sm text-gray-500">🎂 D.O.B: {userData.dob}</p>}
-          {userData.unlockedBadges && <p className="text-sm text-blue-700 mt-2">🎖️ {getBadgeSymbol(userData.unlockedBadges)}</p>}
+          {userData.unlockedBadges && userData.unlockedBadges.length > 0 && (
+  <div className="text-sm text-blue-700 mt-2 flex flex-wrap gap-2 justify-center">
+    {getBadgeSymbols(userData.unlockedBadges).map((badge, idx) => (
+      <span key={idx} className="px-2 py-1 bg-blue-100 rounded-lg">{badge}</span>
+    ))}
+  </div>
+)}
 
           {/* Follow Counts */}
           <div className="mt-2">
